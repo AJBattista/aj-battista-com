@@ -32,28 +32,34 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center min-h-[90vh] px-6 sm:px-12 text-center">
-        <p className="text-sm sm:text-base font-medium uppercase tracking-[0.2em] text-[var(--accent)] mb-6">
-          Agentic-built web tools
+      <section className="relative flex flex-col items-center justify-center min-h-[92vh] px-6 sm:px-12 text-center overflow-hidden">
+        {/* Background gradient orbs */}
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[var(--accent)]/[0.06] blur-[120px]" />
+          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-violet-500/[0.04] blur-[100px]" />
+        </div>
+
+        <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-[var(--accent)] mb-8">
+          Data-Driven Decision Tools
         </p>
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08] max-w-4xl mb-6">
+        <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight leading-[1.06] max-w-4xl mb-8 bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-transparent">
           Decision Tools for Growth, Marketing, and Client&nbsp;Insight
         </h1>
-        <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mb-12 leading-relaxed">
+        <p className="text-base sm:text-lg lg:text-xl text-zinc-400 max-w-2xl mb-14 leading-relaxed">
           Simple, high-utility tools built to help founders, operators, and
           marketers make better decisions faster.
         </p>
         <a
           href="#tools"
-          className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--accent-foreground)] font-semibold text-base sm:text-lg px-8 py-4 rounded-full hover:brightness-110 hover:shadow-[0_0_30px_rgba(0,240,255,0.25)] transition-all duration-300"
+          className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--accent-foreground)] font-bold text-sm sm:text-base px-8 py-3.5 rounded-full hover:brightness-110 hover:shadow-[0_0_30px_rgba(0,224,240,0.3)] transition-all duration-300"
         >
           Explore Tools
           <svg
-            width="16"
-            height="16"
+            width="15"
+            height="15"
             viewBox="0 0 16 16"
             fill="none"
-            className="mt-0.5"
+            className="mt-px"
           >
             <path
               d="M8 3L8 13M8 13L13 8M8 13L3 8"
@@ -67,24 +73,24 @@ export default function Home() {
       </section>
 
       {/* Featured Tools Grid */}
-      <section id="tools" className="px-6 sm:px-12 py-24 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section id="tools" className="scroll-mt-8 px-6 sm:px-12 py-28 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
           {tools.map((tool) => (
             <Link
               key={tool.href}
               href={tool.href}
-              className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden transition-all duration-300 hover:border-zinc-600 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
+              className="group flex flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/40 overflow-hidden transition-all duration-300 ease-out hover:border-zinc-600 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(0,0,0,0.5)]"
             >
               {tool.preview}
 
-              <div className="flex flex-col flex-1 p-6">
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors duration-300">
+              <div className="flex flex-col flex-1 px-6 py-5">
+                <h3 className="text-base font-bold mb-2 tracking-tight group-hover:text-[var(--accent)] transition-colors duration-300">
                   {tool.name}
                 </h3>
-                <p className="text-sm text-zinc-400 leading-relaxed mb-6 flex-1">
+                <p className="text-sm text-zinc-400 leading-relaxed mb-5 flex-1">
                   {tool.description}
                 </p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--accent)]">
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent)] opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                   Open Tool
                   <svg
                     width="14"
@@ -108,24 +114,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Strip */}
-      <section className="px-6 sm:px-12 py-16 text-center">
-        <p className="text-sm sm:text-base text-zinc-500 max-w-2xl mx-auto leading-relaxed">
-          Built with agentic development workflows using Next.js, TypeScript,
-          Tailwind CSS, and AI-assisted engineering.
-        </p>
-      </section>
-
       {/* Footer */}
-      <footer className="px-6 sm:px-12 py-10 text-center border-t border-zinc-800/60">
-        <p className="text-xs sm:text-sm text-zinc-600">
+      <footer className="px-6 sm:px-12 py-10 text-center border-t border-zinc-800/50">
+        <p className="text-xs text-zinc-600 tracking-wide">
           Aloysius &lsquo;AJ&rsquo; Battista &bull; Marketing &bull; Tampa, FL
           &bull;{" "}
           <a
             href="https://www.linkedin.com/in/AJ-battista"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-500 hover:text-zinc-300 underline underline-offset-2 transition-colors duration-200"
+            className="text-zinc-500 hover:text-[var(--accent)] transition-colors duration-200"
           >
             linkedin.com/in/AJ-battista
           </a>

@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AJ Battista",
-  description: "Portfolio homepage.",
+  title: "AJ Battista — Decision Tools for Growth, Marketing, and Client Insight",
+  description:
+    "Simple, high-utility tools built to help founders, operators, and marketers make better decisions faster. Built with agentic development workflows using Next.js, TypeScript, and Tailwind CSS.",
 };
 
 
