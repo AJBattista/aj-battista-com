@@ -1,23 +1,30 @@
 import Link from "next/link";
+import { ReactNode } from "react";
+import BarChartPreview from "@/components/previews/BarChartPreview";
+import KpiStripPreview from "@/components/previews/KpiStripPreview";
+import ScoringGridPreview from "@/components/previews/ScoringGridPreview";
 
-const tools = [
+const tools: { name: string; description: string; href: string; preview: ReactNode }[] = [
   {
     name: "Marketing Channel ROI Simulator",
     description:
       "Estimate which marketing channels are most likely to produce the highest ROI before allocating budget.",
     href: "/marketing-channel-roi-simulator",
+    preview: <BarChartPreview />,
   },
   {
     name: "Client Pulse",
     description:
       "Track client health, engagement signals, and retention risk in a simple dashboard.",
     href: "/client-pulse",
+    preview: <KpiStripPreview />,
   },
   {
     name: "Growth Decision Engine",
     description:
       "Evaluate growth strategies using structured decision logic and visual simulations.",
     href: "/growth-decision-engine",
+    preview: <ScoringGridPreview />,
   },
 ];
 
@@ -68,8 +75,7 @@ export default function Home() {
               href={tool.href}
               className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden transition-all duration-300 hover:border-zinc-600 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
             >
-              {/* Dashboard preview placeholder — Task 4 will fill this */}
-              <div className="h-44 bg-zinc-900 border-b border-zinc-800" />
+              {tool.preview}
 
               <div className="flex flex-col flex-1 p-6">
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors duration-300">
