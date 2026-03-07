@@ -107,6 +107,30 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* About Strip */}
+      <section className="px-6 sm:px-12 py-16 text-center">
+        <p className="text-sm sm:text-base text-zinc-500 max-w-2xl mx-auto leading-relaxed">
+          Built with agentic development workflows using Next.js, TypeScript,
+          Tailwind CSS, and AI-assisted engineering.
+        </p>
+      </section>
+
+      {/* Footer */}
+      <footer className="px-6 sm:px-12 py-10 text-center border-t border-zinc-800/60">
+        <p className="text-xs sm:text-sm text-zinc-600">
+          Aloysius &lsquo;AJ&rsquo; Battista &bull; Marketing &bull; Tampa, FL
+          &bull;{" "}
+          <a
+            href="https://www.linkedin.com/in/AJ-battista"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-500 hover:text-zinc-300 underline underline-offset-2 transition-colors duration-200"
+          >
+            linkedin.com/in/AJ-battista
+          </a>
+        </p>
+      </footer>
     </main>
   );
 }
