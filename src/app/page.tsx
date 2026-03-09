@@ -8,21 +8,21 @@ const tools: { name: string; description: string; href: string; preview: ReactNo
     name: "Marketing Channel ROI Simulator",
     description:
       "Estimate which marketing channels are most likely to produce the highest ROI before allocating budget.",
-    href: "https://marketing-channel-roi-simulator.vercel.app",
+    href: "https://simulator.aj-battista.com",
     preview: <BarChartPreview />,
   },
   {
     name: "Funnel Gap Analyzer",
     description:
       "Identify where your funnel is losing conversions and estimate the revenue impact of each stage.",
-    href: "https://funnel-gap-analyzer.vercel.app",
+    href: "https://funnel.aj-battista.com",
     preview: <FunnelPreview />,
   },
   {
     name: "Content Strategy Planner",
     description:
       "Design a balanced content strategy across channels and formats using industry benchmarks and performance signals.",
-    href: "https://content-strategy-planner-mu.vercel.app",
+    href: "https://planner.aj-battista.com",
     preview: <HeatmapPreview />,
   },
 ];
