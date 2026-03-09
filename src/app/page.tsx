@@ -1,30 +1,29 @@
-import Link from "next/link";
 import { ReactNode } from "react";
 import BarChartPreview from "@/components/previews/BarChartPreview";
-import KpiStripPreview from "@/components/previews/KpiStripPreview";
-import ScoringGridPreview from "@/components/previews/ScoringGridPreview";
+import FunnelPreview from "@/components/previews/FunnelPreview";
+import HeatmapPreview from "@/components/previews/HeatmapPreview";
 
 const tools: { name: string; description: string; href: string; preview: ReactNode }[] = [
   {
     name: "Marketing Channel ROI Simulator",
     description:
       "Estimate which marketing channels are most likely to produce the highest ROI before allocating budget.",
-    href: "/marketing-channel-roi-simulator",
+    href: "https://marketing-channel-roi-simulator.vercel.app",
     preview: <BarChartPreview />,
   },
   {
-    name: "Client Pulse",
+    name: "Funnel Gap Analyzer",
     description:
-      "Track client health, engagement signals, and retention risk in a simple dashboard.",
-    href: "/client-pulse",
-    preview: <KpiStripPreview />,
+      "Identify where your funnel is losing conversions and estimate the revenue impact of each stage.",
+    href: "https://funnel-gap-analyzer.vercel.app",
+    preview: <FunnelPreview />,
   },
   {
-    name: "Growth Decision Engine",
+    name: "Content Strategy Planner",
     description:
-      "Evaluate growth strategies using structured decision logic and visual simulations.",
-    href: "/growth-decision-engine",
-    preview: <ScoringGridPreview />,
+      "Design a balanced content strategy across channels and formats using industry benchmarks and performance signals.",
+    href: "https://content-strategy-planner-mu.vercel.app",
+    preview: <HeatmapPreview />,
   },
 ];
 
@@ -43,11 +42,11 @@ export default function Home() {
           Data-Driven Decision Tools
         </p>
         <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight leading-[1.06] max-w-4xl mb-8 bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-transparent">
-          Decision Tools for Growth, Marketing, and Client&nbsp;Insight
+          Make Better Marketing Decisions&nbsp;Faster
         </h1>
         <p className="text-base sm:text-lg lg:text-xl text-zinc-400 max-w-2xl mb-14 leading-relaxed">
-          Simple, high-utility tools built to help founders, operators, and
-          marketers make better decisions faster.
+          Practical tools built to analyze marketing performance, identify
+          conversion gaps, and plan effective content strategies.
         </p>
         <a
           href="#tools"
@@ -76,9 +75,11 @@ export default function Home() {
       <section id="tools" className="scroll-mt-8 px-6 sm:px-12 py-28 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
           {tools.map((tool) => (
-            <Link
+            <a
               key={tool.href}
               href={tool.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/40 overflow-hidden transition-all duration-300 ease-out hover:border-zinc-600 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(0,0,0,0.5)]"
             >
               {tool.preview}
@@ -109,7 +110,7 @@ export default function Home() {
                   </svg>
                 </span>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </section>
@@ -120,12 +121,12 @@ export default function Home() {
           Aloysius &lsquo;AJ&rsquo; Battista &bull; Marketing &bull; Tampa, FL
           &bull;{" "}
           <a
-            href="https://www.linkedin.com/in/AJ-battista"
+            href="https://www.linkedin.com/in/aj-battista"
             target="_blank"
             rel="noopener noreferrer"
             className="text-zinc-500 hover:text-[var(--accent)] transition-colors duration-200"
           >
-            linkedin.com/in/AJ-battista
+            linkedin.com/in/aj-battista
           </a>
         </p>
       </footer>
