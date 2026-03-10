@@ -95,7 +95,7 @@ export default function Home() {
                 <span className="text-xs font-mono text-text-muted tracking-wide">
                   {mod.subdomain}
                 </span>
-                <span className="inline-flex items-center gap-2 bg-accent text-accent-foreground text-sm font-semibold px-5 py-2 rounded-[var(--card-radius)] group-hover:bg-accent-hover transition-colors duration-200">
+                <span className="inline-flex items-center gap-2 bg-accent text-accent-foreground text-xs sm:text-sm font-semibold px-3 py-1.5 sm:px-5 sm:py-2 rounded-[var(--card-radius)] group-hover:bg-accent-hover transition-colors duration-200 whitespace-nowrap shrink-0 w-auto">
                   Execute Module
                 </span>
               </div>
