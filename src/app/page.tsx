@@ -105,14 +105,14 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 sm:px-12 py-10 text-center border-t border-divider">
-        <p className="text-xs text-text-muted tracking-wide">
-          Brandvisor &bull; Marketing Intelligence &bull;{" "}
+      <footer className="mt-12 sm:mt-16 pb-8 text-center">
+        <p className="text-xs font-light tracking-wider text-text-muted">
+          Aloysius &ldquo;AJ&rdquo; Battista &bull; Marketing &bull; Tampa, FL &bull;{" "}
           <a
             href="https://www.linkedin.com/in/aj-battista"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-text-body hover:text-highlight transition-colors duration-200"
+            className="text-text-muted hover:text-highlight transition-colors duration-200"
           >
             linkedin.com/in/aj-battista
           </a>
