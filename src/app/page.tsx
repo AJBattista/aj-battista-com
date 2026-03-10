@@ -91,11 +91,11 @@ export default function Home() {
               </p>
 
               {/* Footer row */}
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-3">
                 <span className="text-xs font-mono text-text-muted tracking-wide">
                   {mod.subdomain}
                 </span>
-                <span className="inline-flex items-center gap-2 bg-accent text-accent-foreground text-sm font-semibold px-5 py-2 rounded-[var(--card-radius)] group-hover:bg-accent-hover transition-colors duration-200">
+                <span className="w-auto inline-flex items-center gap-2 bg-accent text-accent-foreground text-sm font-semibold px-5 py-2.5 sm:px-6 sm:py-3 rounded-[var(--card-radius)] group-hover:bg-accent-hover transition-colors duration-200">
                   Execute Module
                 </span>
               </div>
