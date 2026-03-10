@@ -2,27 +2,27 @@ const rowLabels = ["UGC", "Educational", "Thought Lead.", "Product Demo"];
 const colLabels = ["TikTok", "Instagram", "YouTube", "LinkedIn"];
 
 const cells = [
-  ["bg-emerald-500/70", "bg-emerald-500/70", "bg-amber-500/60", "bg-zinc-600/50"],
-  ["bg-amber-500/60", "bg-emerald-500/70", "bg-emerald-500/70", "bg-emerald-500/70"],
-  ["bg-zinc-600/50", "bg-amber-500/60", "bg-amber-500/60", "bg-emerald-500/70"],
-  ["bg-amber-500/60", "bg-emerald-500/70", "bg-emerald-500/70", "bg-amber-500/60"],
+  ["bg-chart-1", "bg-chart-1", "bg-chart-2", "bg-chart-3"],
+  ["bg-chart-2", "bg-chart-1", "bg-chart-1", "bg-chart-1"],
+  ["bg-chart-3", "bg-chart-2", "bg-chart-2", "bg-chart-1"],
+  ["bg-chart-2", "bg-chart-1", "bg-chart-1", "bg-chart-2"],
 ];
 
 export default function HeatmapPreview() {
   return (
-    <div className="h-44 bg-zinc-950/80 border-b border-zinc-800/60 p-5 flex flex-col justify-center">
+    <div className="h-44 bg-surface-chart border-b border-border p-5 flex flex-col justify-center">
       <div className="space-y-1.5">
         <div className="grid grid-cols-[68px_1fr_1fr_1fr_1fr] gap-1.5">
           <div />
           {colLabels.map((col) => (
-            <span key={col} className="text-[9px] text-zinc-500 font-medium text-center uppercase tracking-wider">
+            <span key={col} className="text-[9px] text-text-muted font-medium text-center uppercase tracking-wider">
               {col}
             </span>
           ))}
         </div>
         {cells.map((row, i) => (
           <div key={i} className="grid grid-cols-[68px_1fr_1fr_1fr_1fr] gap-1.5 items-center">
-            <span className="text-[9px] text-zinc-500 font-medium text-right pr-0.5 uppercase tracking-wider truncate">
+            <span className="text-[9px] text-text-muted font-medium text-right pr-0.5 uppercase tracking-wider truncate">
               {rowLabels[i]}
             </span>
             {row.map((cell, j) => (
